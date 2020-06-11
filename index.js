@@ -54,6 +54,7 @@ let SimpleParseSmtpAdapter = (adapterOptions) => {
             pass: adapterOptions.password
         },
         tls: {
+            ciphers: adapterOptions.ciphers !== undefined ? adapterOptions.ciphers : undefined,
             rejectUnauthorized: adapterOptions.isTlsRejectUnauthorized !== undefined ? adapterOptions.isTlsRejectUnauthorized : true
         }
     });
