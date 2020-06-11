@@ -48,6 +48,7 @@ let SimpleParseSmtpAdapter = (adapterOptions) => {
         host: adapterOptions.host,
         port: adapterOptions.port,
         secure: adapterOptions.isSSL,
+        requireTLS: adapterOptions.requireTLS,
         name: adapterOptions.name || '127.0.0.1',
         auth: {
             user: adapterOptions.user,
