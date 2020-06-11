@@ -21,7 +21,7 @@ let SimpleParseSmtpAdapter = (adapterOptions) => {
             if (!adapterOptions || !adapterOptions.user || !adapterOptions.password || !adapterOptions.host || !adapterOptions.fromAddress ) {
                 throw 'SimpleParseSMTPAdapter requires user, password, host, and fromAddress';
             }
-    }else{
+    }else if(!adapterOptions.service){
             throw 'SimpleParseSMTPAdapter please choose service Gmail or SMTP';
     }
 
